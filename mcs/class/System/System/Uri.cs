@@ -2345,7 +2345,7 @@ namespace System {
 
 		private void EnsureAbsoluteUri ()
 		{
-			if (!IsAbsoluteUri)
+			if (false && !IsAbsoluteUri)
 				throw new InvalidOperationException ("This operation is not supported for a relative URI.");
 		}
 	}

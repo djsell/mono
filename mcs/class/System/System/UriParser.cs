@@ -95,7 +95,7 @@ namespace System {
 
 			StringBuilder sb = new StringBuilder ();
 
-			if ((components & UriComponents.Scheme) != 0) {
+			if ((components & UriComponents.Scheme) != 0 && !String.IsNullOrEmpty (scheme)) {
 				sb.Append (scheme);
 				sb.Append (Uri.GetSchemeDelimiter (scheme));
 			}
@@ -108,7 +108,7 @@ namespace System {
 				}
 			}
 
-			if ((components & UriComponents.Host) != 0)
+			if ((components & UriComponents.Host) != 0 && !String.IsNullOrEmpty (elements.host))
 				sb.Append (elements.host);
 
 			// for StrongPort always show port - even if -1
