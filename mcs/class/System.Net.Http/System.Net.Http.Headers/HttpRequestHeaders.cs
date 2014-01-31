@@ -162,7 +162,7 @@ namespace System.Net.Http.Headers
 
 		public string Host {
 			get {
-				return GetValue<string> ("Host");
+				return GetValue<System.Uri> ("Host").ToString();
 			}
 			set {
 				AddOrRemove ("Host", value);
